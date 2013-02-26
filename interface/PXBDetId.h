@@ -45,14 +45,14 @@ class PXBDetId : public DetId {
  private:
   /// two bits would be enough, but  we could use the number "0" as a wildcard
   static const unsigned int layerStartBit_=   20;
-  static const unsigned int ladderStartBit_=  10;
+  static const unsigned int ladderStartBit_=  12;
   static const unsigned int moduleStartBit_=   2;
   static const unsigned int typeStartBit_ =    0;
   
   /// two bits would be enough, but  we could use the number "0" as a wildcard
   static const unsigned int layerMask_=       0xF;
-  static const unsigned int ladderMask_=      0x3FF;
-  static const unsigned int moduleMask_=      0xFF;
+  static const unsigned int ladderMask_=      0xFF;
+  static const unsigned int moduleMask_=      0x3FF;
   static const unsigned int typeMask_=	      0x3;
 
 };
