@@ -50,13 +50,13 @@ class PXFDetId : public DetId {
   /// Blade id **NP Changed to handle blade/ring ambiguity
   unsigned int blade() const
   {
-    if (this->disk() < 4)
+    //if (this->disk() < 4) // For Phase2BE
       return ((id_>>bladeStartBit_) & bladeMask_);
-    else
-    {
-      std::cerr << "W A R N I N G! Attempting to get PXF::blade() from Outer Tracker Endcap" << std::endl;
-      return 9999999;
-    }
+    //else
+    //{
+    //  std::cerr << "W A R N I N G! Attempting to get PXF::blade() from Outer Tracker Endcap" << std::endl;
+    //  return 9999999;
+    //}
   }
 
   /// Ring id **NP Phase 2 tracker mod
